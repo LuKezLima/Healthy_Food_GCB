@@ -286,6 +286,27 @@ form button:hover{
         "city district"
         "street -"  
     }
+ 
+}
+
+@media screen and (max-width:769px){
+    #navs ul{
+        display: flex;
+        position: relative;
+        height: 10vh;
+        left: 0;
+        width: 20%;
+        background-color: #fff;
+        align-items: center;
+    }
+
+    #navs{
+        display: flex;
+        align-items: center;
+    }
+     
+
+   
 }
 
 @media screen and (max-width: 425px) {
@@ -295,6 +316,7 @@ form button:hover{
     #navs, #registers, #form{
         width: 90%;
     }
+    
 }
 
 @media screen and (max-width: 375px) {

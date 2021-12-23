@@ -12,7 +12,7 @@ import articleImg2 from "../../../assets/bloco_image_2.svg";
 import articleImg3 from "../../../assets/bloco_image_3.svg";
 import articleImg4 from "../../../assets/bloco_image_4.svg";
 
-import arrow from "C:/Users/lucas/OneDrive/Área de Trabalho/landingpage/src/assets/Arrow.png";
+import arrow from "../../../assets/Arrow.png";
 
 
 export default function Blog(props) {

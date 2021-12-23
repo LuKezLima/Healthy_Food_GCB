@@ -37,8 +37,8 @@ html{
     object-fit: cover;
     z-index: -10;
 
-}
-
+    
+} 
 #header{
     height: 10%;
     width: 100%;
@@ -90,9 +90,9 @@ li a:hover{
     display: none;
 }
 
-#title{
+#nav h1{
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--main--color);
 }
 
@@ -100,6 +100,7 @@ li a:hover{
     background-color: white;
     color: var(--main--color);
     border-radius: 4px;
+    padding: 1rem 2.5rem;
 }
 
 #container-search{
@@ -115,8 +116,8 @@ li a:hover{
 
 }
 
-#call-text{
-    font-size: 4.5rem;
+#container-search h2{
+    font-size: 5rem;
     color: var(--secondary--color);
     letter-spacing: 2px;
     font-family:'Montserrat', sans-serif;
@@ -124,10 +125,10 @@ li a:hover{
 }
 
 
-#search-box{
+#container-search div{
 display: flex;
 justify-content: space-between;
-height: 5rem;
+height: 6rem;
 margin-top: 1rem;
 }
 
@@ -154,7 +155,7 @@ margin-top: 1rem;
     background-color: var(--main--color);
     color: #fff;
     border: none;
-    background-image: url(/src/assets/magnifying-glass.png);
+    background-image: url(../assets/magnifying-glass.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
@@ -206,7 +207,7 @@ margin-top: 1rem;
 }
 
 #text-best{
-    font-size: 3.4rem;
+    font-size: 3.2rem;
     color: var(--secondary--color);
     letter-spacing: 2px;
     font-family:'Montserrat', sans-serif;
@@ -216,7 +217,7 @@ margin-top: 1rem;
 
 .paragraph{
     color: #B4B4B4;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-family:'Montserrat', sans-serif;
     line-height: 2rem;
     letter-spacing: .1rem;
@@ -259,7 +260,7 @@ width: 50%;
 }
 
 .name-recipe{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: var(--secondary--color);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -303,13 +304,14 @@ width: 50%;
 
 #btn-service{
     margin-top: 10%;
-    padding: 15px 25px;
+    padding: 1.8rem 2.5rem;
     background-color: var(--main--color);
     border: none;
     border-radius: 5px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     box-shadow: 3px 2px 10px 0px #d6d6d6;
+    font-size: 1.3rem;
 }
 
 .image-container{
@@ -346,7 +348,7 @@ width: 50%;
 }
 
 .title-blog{
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Montserrat' sans-serif;
     color: var(--secondary--color);
 }
@@ -411,7 +413,7 @@ width: 50%;
 }
 
 #text-blog{
-    width: 40%;
+    width: 50%;
     height: 25%;
     text-align: center;
     display: flex;
@@ -424,16 +426,11 @@ width: 50%;
 }
 
 
-#join-sec{
-    position: absolute;
-}
 
 #footer{
     width: 100%;
     height: 10%;
     text-align: center;
-    position: relative;
-    top: 90%;
 }
 
 #footer-bar{
@@ -449,20 +446,24 @@ figure{
     width: 50%;
 }
 
+#join-sec{
+    height: 90vh;
+}
+
 #join{ 
     width: 100%;
-    height: 88%;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
 
 #footer-list a{
     color: #B4B4B4;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #footer-bar{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #join-container{
@@ -501,6 +502,7 @@ figure{
 
 #input-membership::placeholder{
     color: #B4B4B4;
+    font-size: 1.3rem;
 }
 
 #text-join{
@@ -543,10 +545,8 @@ h4{
     }
 
 }
-@media screen and (max-width: 1025px) { 
-    html{
-        font-size: 45%;
-    }
+@media (max-width: 1025px) { 
+  
     #join-group-input{
         display: flex; 
         flex-direction: column; 
@@ -554,12 +554,24 @@ h4{
         margin-top: 1rem;
     }
 
+    ul li{
+        font-size: 1rem;
+    }
+
+    #container-Search h2{
+        font-size: 4rem;
+    }
+
     #input-membership{
         height: 6rem;
     }
     
     .title-blog{
-        font-size: 3.2rem;
+        font-size: 2.2rem;
+    }
+
+    .paragraph{
+        font-size: 1.5rem;
     }
   
 }
@@ -568,7 +580,9 @@ h4{
         font-size: 38%;
     }
 }
-@media screen and (max-width: 768px) { 
+
+/*Configuração Mobile - Portrait */
+@media screen and (max-width: 769px) { 
     html{
         font-size: 60%;
     }
@@ -645,10 +659,6 @@ h4{
         font-size: 1.5rem;
     }
 
-    #btn-join{
-        box-shadow: 5px 5px 15px 0px #d6d6d6;
-    }
-
    .recipe{
        width: 74%;
        height: 80%;
@@ -660,7 +670,7 @@ h4{
         justify-content: space-between;
     }
 
-    #nav #title{
+    #nav h1{
         margin-left: 15px;
         font-size: 3.5rem;
     }
@@ -674,7 +684,7 @@ h4{
     ul{
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         background-color: #bbdc58f6;
         top:100%;
         left: -100%;
@@ -745,7 +755,7 @@ h4{
     }
 
     .title-blog{
-        font-size: 2.6rem;
+        font-size: 2.3rem;
     }
 
    #text-blog{
@@ -764,6 +774,7 @@ h4{
    #input-membership{
        width: 100%;
    }
+
    #join-group-input{
        width: 80%;
        align-items: center;
@@ -779,15 +790,19 @@ h4{
        margin: 0 auto;
    };
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 601px) {
     html{
-        font-size: 40%;
+        font-size: 48%;
     }
     .photo-author{
-        width: 30%;
+        width: 10%;
     }
-    
-
+}
+@media screen and (max-width: 426px){
+    html{
+        font-size: 39%;
+    }
+   
     #blog-group{
         display: flex;
         flex-direction: column;
@@ -823,7 +838,7 @@ h4{
     }
 
     .photo-author{
-        width: 13%;
+        width: 9%;
     }
 
     #join{
@@ -835,7 +850,7 @@ h4{
         margin-top: -90px;
         color: rgb(255, 255, 255);
         font-weight:bolder;
-        font-size:2.4rem;
+        font-size:2.2rem;
         text-shadow: #000000 1px 1px;
         
     }
@@ -853,9 +868,116 @@ h4{
         margin-right:0;
     }
 }
-
 @media screen and (max-width: 320px) {
         html{
-            font-size: 30%;
+            font-size: 32%;
         }
+}
+@media screen and (max-width: 250px) {
+    html{
+        font-size: 21%;
+    }
+
+    .title-blog{
+        margin-top: -40px;
+    }
+}
+
+/*Configuração Mobile - Landscape */
+@media (max-width: 800px) and (orientation: landscape)  {
+    html
+    {
+     font-size: 40%;
+    }
+    .image-mobile{
+        width: 24%;
+    }
+    .image-mobile2{
+        width: 55%;
+        margin: 0 auto;
+    }
+    figure{
+        margin-top: 2rem;
+    }
+    #services{
+        flex-direction: row;
+    }
+    .image-container{
+        width: 55%;
+       
+    }
+
+    .info{
+        width: 37%;
+        
+    }
+    .paragraph{
+        font-size: 1.4rem;
+    }
+
+    .title-blog{
+        position: absolute;
+        margin-top: -75px;
+        color: rgb(255, 255, 255);
+        font-weight:bolder;
+        font-size:1.8rem;
+        text-shadow: #000000 1px 1px;
+        
+    }
+
+    #blog-group{
+        width: 90%;
+        margin: 0 auto;
+        justify-items: center;
+        margin-top: 4rem;
+    }
+
+    .image-blog-group{
+        height: 65%;
+    }
+
+
+
+    .photo-author{
+        width: 10%;
+    }
+
+    .blog-card{
+        height: 74%;
+        align-self: baseline;
+    }
+    .recipe{
+        width:70%;
+        height: 73%;
+        align-self:baseline;
+
+    }
+    #recipes-container{
+        width: 100%;
+    }
+    #recipes-group{
+     margin-top: 2rem;
+    }
+
+    .btn-recipe{
+        height: auto;
+        padding: 6px 20px;
+    }
+    
+}
+
+@media (max-width: 685px) and (orientation: landscape)  {
+    html
+    {
+     font-size: 32%;
+    }
+    .image-mobile{
+        width: 20%;
+    }
+    .image-mobile2{
+        width: 40%;
+    }
+    figure{
+        margin-top: 6rem;
+    }  
 }

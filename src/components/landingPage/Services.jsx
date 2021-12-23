@@ -10,8 +10,8 @@ export default function Service(props) {
     <section className="section" id="services">
 
     <div className="image-container" >
-        <img src={imgServiceBg} alt="" className="image-back"  />
-        <img src={imgServiceBgMobile} className="image-mobile2"  />
+        <img src={imgServiceBg} alt="ilustração" className="image-back"  />
+        <img src={imgServiceBgMobile} alt="ilustração" className="image-mobile2"  />
     </div>
 
     <div className="info">

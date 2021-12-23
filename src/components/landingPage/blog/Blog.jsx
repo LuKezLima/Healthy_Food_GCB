@@ -55,7 +55,7 @@ export default function Blog(props) {
 
 
 <button id="btn-slider-next">
-    <img src={arrow} alt="" id="image-arrow"/>
+    <img src={arrow} alt="icone de flecha" id="image-arrow"/>
 </button>
 
 </section>

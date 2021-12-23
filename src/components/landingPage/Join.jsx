@@ -20,8 +20,8 @@ export default function Join(props) {
                 </div>
             </div>
             <figure>
-                <img src={finalImage} alt="" id="image-finalblock"/>
-                <img src={finalImageMobile}alt="" className="image-mobile2"/>
+                <img src={finalImage} alt="ilustração" id="image-finalblock"/>
+                <img src={finalImageMobile}alt="ilustração" className="image-mobile2"/>
             </figure>
         </div>
    </section>

@@ -5,7 +5,7 @@ export default (props) => {
         <div className="blog-card">
 
                 <div className="image-blog-group">
-                    <img src={props.articleImg} alt="" className="image-blog"/>
+                    <img src={props.articleImg} alt="imagem do artigo" className="image-blog"/>
 
                 </div>
                 <div className="info-blog-card">

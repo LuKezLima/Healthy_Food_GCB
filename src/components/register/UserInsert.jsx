@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default (props)=>{
+export default (props) =>{
     return( <>
            <tr>
                             <td>{props.name}</td>

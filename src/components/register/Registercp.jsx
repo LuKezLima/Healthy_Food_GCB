@@ -101,20 +101,20 @@ export default (props) => {
             var Resto;
             Soma = 0;
             let i
-          if (idformated == "00000000000") return false;
+          if (idformated === "00000000000") return false;
         
           for (i=1; i<=9; i++) Soma = Soma + parseInt(idformated.substring(i-1, i)) * (11 - i);
           Resto = (Soma * 10) % 11;
         
-            if ((Resto == 10) || (Resto == 11))  Resto = 0;
-            if (Resto != parseInt(idformated.substring(9, 10)) ) return alert('CPF INVÁLIDO');
+            if ((Resto === 10) || (Resto === 11))  Resto = 0;
+            if (Resto !== parseInt(idformated.substring(9, 10)) ) return alert('CPF INVÁLIDO');
         
           Soma = 0;
             for (i = 1; i <= 10; i++) Soma = Soma + parseInt(idformated.substring(i-1, i)) * (12 - i);
             Resto = (Soma * 10) % 11;
         
-            if ((Resto == 10) || (Resto == 11))  Resto = 0;
-            if (Resto != parseInt(idformated.substring(10, 11) ) ) return alert('CPF INVÁLIDO');
+            if ((Resto === 10) || (Resto === 11))  Resto = 0;
+            if (Resto !== parseInt(idformated.substring(10, 11) ) ) return alert('CPF INVÁLIDO');
             return true;
           },
 
@@ -128,8 +128,8 @@ export default (props) => {
       },
         verifyFields() // Função responsável por verificar se há campos vazios
         {
-            if(email == '' || zip == ''
-             || name == '' || birth == ''){
+            if(email === '' || zip === ''
+             || name === '' || birth === ''){
                 return false
                } else{
                    return true
@@ -137,7 +137,7 @@ export default (props) => {
         },
         verifyZip() //  Função responsável por Verificar o cep e Acionar a consumação da api
         {
-            if(zip.length==9){
+            if(zip.length===9){
                 getApi(zip)
             }
         }
@@ -159,7 +159,7 @@ export default (props) => {
     <main>
         <div id="form">
             <h2>Sign Up</h2>
-            <form action="" onLoad={useEffect(()=>{reload()}, [])}>
+            <form action="" onLoad={useEffect(()=>{reload()},[])}>
     
                     <div className="input-group" id="name">
                         <label htmlFor="name">Name</label>

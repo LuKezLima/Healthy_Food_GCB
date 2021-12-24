@@ -31,7 +31,9 @@ export default (props) => {
 
    
     async function getApi(zip){ // Função responsável por consumir a API de CEP
-        let url = `https://ws.apicep.com/cep/${zip}.json`
+
+  
+        let url = `https://viacep.com.br/ws/${zip}/json/`
         let datas;
         await fetch(url)
         .then((response) => response.json())
@@ -39,15 +41,15 @@ export default (props) => {
             datas = data
         })
         .catch(err=> {
-            alert("Cep não encontrado")
+            alert('CPF não localizado')
         })
 
-        setstate(datas.state)
-        setCity(datas.city)
-        setDistrict(datas.district)
-        setStreet(datas.address)
+        setstate(datas.uf)
+        setCity(datas.localidade)
+        setDistrict(datas.bairro)
+        setStreet(datas.logradouro)
+    
     }
-
 
 
     function addNewUser() {
@@ -129,7 +131,7 @@ export default (props) => {
         verifyFields() // Função responsável por verificar se há campos vazios
         {
             if(email === '' || zip === ''
-             || name === '' || birth === ''){
+             || name === '' || birth === '' || state.length == 0){
                 return false
                } else{
                    return true
@@ -137,13 +139,27 @@ export default (props) => {
         },
         verifyZip() //  Função responsável por Verificar o cep e Acionar a consumação da api
         {
-            if(zip.length===9){
+            if(!zip.includes('_') && !zip==''){
                 getApi(zip)
+            }
+
+            if(zip.endsWith('_')){
+                setstate('')
+                 setCity('')
+                 setDistrict('')
+                 setStreet('')
             }
         }
     
       }
+
+      useEffect (()=>{
+         Validations.verifyZip()
+        },[zip])
+
+    
   
+     
    
     return(
         <>
@@ -239,7 +255,7 @@ export default (props) => {
                         addNewUser()
                         resetFields() 
                             } else{
-                                alert("Preencha todos os campos")    
+                                alert("Verifique todos os campos")    
                          }  
                          
                      }}>Save</button>
